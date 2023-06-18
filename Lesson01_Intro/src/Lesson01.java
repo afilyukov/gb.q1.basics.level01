@@ -1,4 +1,4 @@
-public class Main {
+public class Lesson01 {
     public static void main(String[] args) {
         byte byteMin = -128; // -2^7
         byte byteMax = 127; // 2^7-1
