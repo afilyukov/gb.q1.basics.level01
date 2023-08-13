@@ -1,19 +1,22 @@
 public abstract class Animal {
-    private int max_run = 0;
-    private float max_jump = 0.0f;
-    private int max_swim = 0;
+    protected float maxRun;
+    protected float maxSwim;
+    protected float maxJump;
 
-    public Animal(){
+    public Animal(float maxRun, float maxJump, float maxSwim){
+        this.maxJump = maxRun;
+        this.maxRun = maxRun;
+        this.maxSwim = maxSwim;
     }
 
-    public Animal(int max_run, float max_jump, int max_swim){
-        this.max_jump = max_jump;
-        this.max_run = max_run;
-        this.max_swim = max_swim;
-    }
-    public abstract boolean run(int value);
+    public boolean run(float value){
+        return value<=maxRun;
+    };
 
-    public abstract boolean swim(int value);
-
-    public abstract boolean jump(float value);
+    public boolean swim(float value){
+        return value<=maxSwim;
+    };
+    public boolean jump(float value){
+        return value<=maxJump;
+    };
 }

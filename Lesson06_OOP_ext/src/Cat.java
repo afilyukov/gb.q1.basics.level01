@@ -1,30 +1,16 @@
 public class Cat extends Animal{
-    private int max_run = 200;
-    private float max_jump = 2.0f;
-    private int max_swim = -1;
 
     public Cat(){
-        super();
+        super(200f, 2f, 0);
     }
 
-    public Cat(int max_run, float max_jump, int max_swim) {
-        this.max_run = max_run;
-        this.max_jump = max_jump;
-        this.max_swim = max_swim;
-    }
-
-    @Override
-    public boolean run(int value) {
-        return value<=max_run;
+    public Cat(float maxRun, float maxSwim, float maxJump) {
+        super(maxRun, maxSwim, maxJump);
     }
 
     @Override
-    public boolean swim(int value) {
+    public boolean swim(float val) {
+        System.out.println("Cats do not want to swim");
         return false;
-    }
-
-    @Override
-    public boolean jump(float value) {
-        return value<=max_jump;
     }
 }
