@@ -25,7 +25,7 @@ public class Lesson04 {
             field = getNewField(fieldSize);
             drawField(field);
             currentPlayer = playerSign;
-            boolean isDraw=false;
+            boolean isDraw;
 
             do {
                 doMove(field, fieldSize, currentPlayer);
